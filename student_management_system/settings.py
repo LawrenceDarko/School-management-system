@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'so*rai_2(lk7t(yh%de+_kp_c%*r_b9wkga%gyo5tl9_8_r!xx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #HEROKU LIVE PROJECT LINK
 #ALLOWED_HOSTS = ["studentmanagementsystem22.herokuapp.com"]
@@ -85,32 +85,32 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-if DEBUG:
-    DATABASES = {
-        'default': {
-            #=====Enable Only Making Project Live on Heroku====
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-            # 'ENGINE':'django.db.backends.mysql',
-            # 'NAME':'student_management_system',
-            # 'USER':'student_mgmt',
-            # 'PASSWORD':'Owuradarko11*',
-            # 'HOST':'localhost',
-            # 'PORT':'3306'
-        }
+# if DEBUG:
+#     DATABASES = {
+#         'default': {
+#             #=====Enable Only Making Project Live on Heroku====
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#             # 'ENGINE':'django.db.backends.mysql',
+#             # 'NAME':'student_management_system',
+#             # 'USER':'student_mgmt',
+#             # 'PASSWORD':'Owuradarko11*',
+#             # 'HOST':'localhost',
+#             # 'PORT':'3306'
+#         }
+#     }
+# else:
+DATABASES = {
+    'default': {
+        #=====Enable Only Making Project Live on Heroku====
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'schoolmgmtdb',
+    'USER': 'schoolmgmtuser',
+    'PASSWORD': 'owura11*Darko',
+    'HOST': 'localhost',
+    'PORT': '',
     }
-else:
-    DATABASES = {
-        'default': {
-            #=====Enable Only Making Project Live on Heroku====
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'schoolmgmtdb',
-        'USER': 'schoolmgmtuser',
-        'PASSWORD': 'owura11*Darko',
-        'HOST': 'localhost',
-        'PORT': '',
-        }
-    }
+}
 
 
 
