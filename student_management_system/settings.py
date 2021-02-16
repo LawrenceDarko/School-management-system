@@ -85,20 +85,33 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        #=====Enable Only Making Project Live on Heroku====
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE':'django.db.backends.mysql',
-        # 'NAME':'student_management_system',
-        # 'USER':'student_mgmt',
-        # 'PASSWORD':'Owuradarko11*',
-        # 'HOST':'localhost',
-        # 'PORT':'3306'
+if DEBUG:
+    DATABASES = {
+        'default': {
+            #=====Enable Only Making Project Live on Heroku====
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            # 'ENGINE':'django.db.backends.mysql',
+            # 'NAME':'student_management_system',
+            # 'USER':'student_mgmt',
+            # 'PASSWORD':'Owuradarko11*',
+            # 'HOST':'localhost',
+            # 'PORT':'3306'
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            #=====Enable Only Making Project Live on Heroku====
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'schoolmgmtdb',
+        'USER': 'schoolmgmtuser',
+        'PASSWORD': 'owura11*Darko',
+        'HOST': 'localhost',
+        'PORT': '',
+        }
+    }
+
 
 
 # Password validation
@@ -153,9 +166,9 @@ EMAIL_FILE_PATH=os.path.join(BASE_DIR,"sent_mails")
 #
 
 #Enable Only Making Project Live on Heroku
-STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
-import dj_database_url
-prod_db=dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+# STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
+# import dj_database_url
+# prod_db=dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(prod_db)
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
