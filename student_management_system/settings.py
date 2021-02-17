@@ -104,7 +104,7 @@ DATABASES = {
     'default': {
         #=====Enable Only Making Project Live on Heroku====
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'schoolmgmtdb',
+    'NAME': 'schoolmgmt',
     'USER': 'schoolmgmtuser',
     'PASSWORD': 'owura11*Darko',
     'HOST': 'localhost',
