@@ -86,31 +86,31 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 # if DEBUG:
-#     DATABASES = {
-#         'default': {
-#             #=====Enable Only Making Project Live on Heroku====
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#             # 'ENGINE':'django.db.backends.mysql',
-#             # 'NAME':'student_management_system',
-#             # 'USER':'student_mgmt',
-#             # 'PASSWORD':'Owuradarko11*',
-#             # 'HOST':'localhost',
-#             # 'PORT':'3306'
-#         }
-#     }
-# else:
 DATABASES = {
     'default': {
         #=====Enable Only Making Project Live on Heroku====
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'schoolmgmt',
-    'USER': 'schoolmgmtuser',
-    'PASSWORD': 'owura11*Darko',
-    'HOST': 'localhost',
-    'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE':'django.db.backends.mysql',
+        # 'NAME':'student_management_system',
+        # 'USER':'student_mgmt',
+        # 'PASSWORD':'Owuradarko11*',
+        # 'HOST':'localhost',
+        # 'PORT':'3306'
     }
 }
+# else:
+# DATABASES = {
+#     'default': {
+#         #=====Enable Only Making Project Live on Heroku====
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     'NAME': 'schoolmgmt',
+#     'USER': 'schoolmgmtuser',
+#     'PASSWORD': 'owura11*Darko',
+#     'HOST': 'localhost',
+#     'PORT': '',
+#     }
+# }
 
 
 
