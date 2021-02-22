@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import SchoolHistory, StaffInfo
-from .models  import Home, Footer
+from .models  import Home, Footer, AdministratorHistory
 # Create your views here.
 
 def about(request):
