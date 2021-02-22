@@ -98,6 +98,10 @@ class SchoolHistory(models.Model):
     proprietor_history = models.TextField(max_length=600)
     proprietor_image = models.ImageField(upload_to='StaffImages/', blank=True, null=True)
 
+class AdministratorHistory(models.Model):
+    administrator_history = models.TextField(max_length=600)
+    administrator_image = models.ImageField(upload_to='StaffImages/', blank=True, null=True)
+
 class StaffInfo(models.Model):
     staff_name = models.CharField(max_length=50)
     staff_description = models.TextField(max_length=100)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Home, Course, NoticeImage, Notice, Footer, AdmitNotice, ResearchInfo, StudentNews, StudentNewsTwo, SchoolGallery, SchoolHistory, StaffInfo
+from .models import Home, Course, NoticeImage, Notice, Footer, AdmitNotice, ResearchInfo, StudentNews, StudentNewsTwo, SchoolGallery, SchoolHistory, StaffInfo, AdministratorHistory
 # Register your models here.
 
 admin.site.register(Home)
@@ -15,4 +15,5 @@ admin.site.register(Footer)
 admin.site.register(SchoolGallery)
 
 admin.site.register(SchoolHistory)
+admin.site.register(AdministratorHistory)
 admin.site.register(StaffInfo)
