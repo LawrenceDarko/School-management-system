@@ -91,13 +91,11 @@ DATABASES = {
         #=====Enable Only Making Project Live on Heroku====
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE':'django.db.backends.mysql',
-        'NAME':'bestbrainintl',
-        'USER':'ampem',
-        'PASSWORD':'BrainBest**1',
-        'HOST':'ampem.mysql.pythonanywhere-services.com',
-        'PORT':''
-        # 'PORT':'3306'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ampem$bestbrainintl',
+        'USER': 'ampem',
+        'PASSWORD': 'brainbest**1',
+        'HOST': 'ampem.mysql.pythonanywhere-services.com',
     }
 }
 # else:
