@@ -89,14 +89,14 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 DATABASES = {
     'default': {
         #=====Enable Only Making Project Live on Heroku====
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE':'django.db.backends.mysql',
-        # 'NAME':'student_management_system',
-        # 'USER':'student_mgmt',
-        # 'PASSWORD':'Owuradarko11*',
-        # 'HOST':'localhost',
-        # 'PORT':'3306'
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'bestbrainintl',
+        'USER':'ampem',
+        'PASSWORD':'BrainBest**1',
+        'HOST':'ampem.mysql.pythonanywhere-services.com',
+        'PORT':'3306'
     }
 }
 # else:
