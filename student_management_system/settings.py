@@ -96,7 +96,8 @@ DATABASES = {
         'USER':'ampem',
         'PASSWORD':'BrainBest**1',
         'HOST':'ampem.mysql.pythonanywhere-services.com',
-        'PORT':'3306'
+        'PORT':''
+        # 'PORT':'3306'
     }
 }
 # else:
