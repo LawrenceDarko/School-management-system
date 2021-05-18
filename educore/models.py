@@ -105,7 +105,7 @@ class SchoolGallery(models.Model):
 
 
 class SchoolHistory(models.Model):
-    proprietor_history = models.TextField(max_length=700)
+    proprietor_history = models.TextField(max_length=1000)
     proprietor_image = models.ImageField(
         upload_to='StaffImages/', blank=True, null=True)
 
