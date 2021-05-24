@@ -26,15 +26,15 @@ SECRET_KEY = 'so*rai_2(lk7t(yh%de+_kp_c%*r_b9wkga%gyo5tl9_8_r!xx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#HEROKU LIVE PROJECT LINK
+# HEROKU LIVE PROJECT LINK
 #ALLOWED_HOSTS = ["studentmanagementsystem22.herokuapp.com"]
 ALLOWED_HOSTS = ["*"]
 
-MEDIA_URL="/media/"
-MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-STATIC_URL="/static/"
-STATIC_ROOT=os.path.join(BASE_DIR,"static")
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # Application definition
 
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    #===Enable Only Making Project Live on Heroku==
+    # ===Enable Only Making Project Live on Heroku==
     # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 # if DEBUG:
 DATABASES = {
     'default': {
-        #=====Enable Only Making Project Live on Heroku====
+        # =====Enable Only Making Project Live on Heroku====
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
@@ -110,7 +110,6 @@ DATABASES = {
 #     'PORT': '',
 #     }
 # }
-
 
 
 # Password validation
@@ -150,11 +149,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-AUTH_USER_MODEL="student_management_app.CustomUser"
-AUTHENTICATION_BACKENDS=['student_management_app.EmailBackEnd.EmailBackEnd']
+AUTH_USER_MODEL = "student_management_app.CustomUser"
+AUTHENTICATION_BACKENDS = ['student_management_app.EmailBackEnd.EmailBackEnd']
 
-EMAIL_BACKEND="django.core.mail.backends.filebased.EmailBackend"
-EMAIL_FILE_PATH=os.path.join(BASE_DIR,"sent_mails")
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_mails")
 
 # EMAIL_HOST="smtp.gmail.com"
 # EMAIl_PORT=587
@@ -164,7 +163,7 @@ EMAIL_FILE_PATH=os.path.join(BASE_DIR,"sent_mails")
 # DEFAULT_FROM_EMAIL="Student management System <GMAIl_EMAIL>"
 #
 
-#Enable Only Making Project Live on Heroku
+# Enable Only Making Project Live on Heroku
 # STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 # import dj_database_url
 # prod_db=dj_database_url.config(conn_max_age=500)
