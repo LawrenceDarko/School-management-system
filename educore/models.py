@@ -103,6 +103,9 @@ class SchoolGallery(models.Model):
     image = models.ImageField(
         upload_to='SchoolGallery/', blank=True, null=True)
 
+    def __str__(self):
+        return self.title
+
 
 class SchoolHistory(models.Model):
     proprietor_history = models.TextField(max_length=1000)
